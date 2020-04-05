@@ -94,7 +94,7 @@ html{
 	
 	display: flex;
 	flex-direction: column;
-	margin-left: 150px;
+	margin-left: 230px;
 	justify-content: center;
 	align-items: flex-start;
 	color: #fff;
@@ -102,6 +102,7 @@ html{
 .slogan__title{	
 	max-width: 950px;
 	font-size: 70px;
+	text-shadow: 1px 1px 2px #000;
 	line-height: 75px;
 	font-weight: 700;
 	margin-bottom: 35px;
@@ -122,7 +123,7 @@ html{
 	max-width: 710px;
 	margin-bottom: 58px;
 }
-.slogan__link a{
+.order__link a{
 	padding: 27px 75px;
 	background-color: $orange;
 	border: none;
@@ -138,7 +139,7 @@ html{
 //---------------------------------Start Slider --------------------------
 
 .slider{
-	
+	position: relative;
 }
 .slider__item{
 	width: 100%;
@@ -147,9 +148,97 @@ html{
 	background-position: center center;
 	background-size: cover;
 }
-
-
+.slider__preview{
+ 	position: absolute;
+ 	width: 200px;
+ 	top: 150px;
+ 	left: 50px;
+}
 .slider__nav-item{
 	width: 200px;
 	height: 130px;
+	margin-bottom: 30px;
+	border: 2px solid #fff;
 }
+.slick-prev.slick-arrow, 
+.slick-next.slick-arrow{
+	font-size: 0;
+	width: 60px;
+	height: 60px;
+	border: 8px solid #7b7b7c;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	outline: none;
+}
+.slick-prev.slick-arrow{
+	background-image: url(../images/slider/arrow-prev.png);
+	background-repeat: no-repeat;
+	background-position: center center;	
+	top: -28px;
+    left: 72px;
+    z-index: 6;
+}
+.slick-next.slick-arrow{
+	background-image: url(../images/slider/arrow-next.png);
+	background-repeat: no-repeat;
+	background-position: center center;	
+	bottom: 0px;
+    left: 68px;
+    z-index: 6;
+}
+
+//---------------------------------End Slider --------------------------
+//---------------------------------Start Stocks --------------------------
+.stocks__inner{
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+}
+.stocks__first,
+.stocks__second{
+	width: 50%;
+	padding-left: 160px;
+}
+.stocks__first{
+	background-color: $orange;
+}
+.stocks__second{
+	background-color: $black;
+}
+.stocks__title{
+	margin-top: 120px;
+	margin-bottom: 35px;
+	font-size: 50px;
+	line-height: 75px;
+	font-weight: 700;
+	max-width: 500px;
+	position: relative;
+	&::before{
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 5px;
+		top: -30px;
+		left: 0;
+		background-color: #fff;
+	}
+}
+.stocks__desc{
+	line-height: 35px;
+	margin-bottom: 80px;
+}
+.stocks__first-link,
+.stocks__second-link{
+	margin-bottom: 65px;
+}
+.stocks__first-link a{
+	color: $orange;
+	background-color: #fff;
+}
+//---------------------------------End Stocks --------------------------
+
+
+
+
+@import 'media';
