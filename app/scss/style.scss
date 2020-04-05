@@ -23,7 +23,8 @@ html, body{
 	font-family: 'Arial Bur', sans-serif;
 	font-weight: 400;
 	font-size: 20px;
-	color: #000;
+	line-height: 35px;
+	color: $black;
 }
 body{
 	overflow-x: hidden;
@@ -183,7 +184,7 @@ html{
 	background-image: url(../images/slider/arrow-next.png);
 	background-repeat: no-repeat;
 	background-position: center center;	
-	bottom: 0px;
+	bottom: 5px;
     left: 68px;
     z-index: 6;
 }
@@ -211,6 +212,7 @@ html{
 	margin-bottom: 35px;
 	font-size: 50px;
 	line-height: 75px;
+	text-transform: uppercase;
 	font-weight: 700;
 	max-width: 500px;
 	position: relative;
@@ -237,6 +239,49 @@ html{
 	background-color: #fff;
 }
 //---------------------------------End Stocks --------------------------
+//---------------------------------Start About --------------------------
+.about{
+	margin-top: 100px;
+	margin-bottom: 160px;
+}
+.about__inner{
+	display: flex;
+	justify-content: space-between;
+}
+.block-title{
+	font-size: 50px;
+	line-height: 75px;
+	font-weight: 700;
+	color: $black;
+	margin-top: 110px;
+	margin-bottom: 50px;
+}
+.about__desc{
+	max-width: 420px;
+	margin-bottom: 75px;
+}
+.about-image{
+	position: relative;
+	&::after{
+		content: "";
+		position: absolute;
+		width: 190px;
+		height: 180px;
+		top: -30px;
+    	right: -30px;
+		background-image: url(../images/content/top-right-corner.png);
+	}
+	&::before{
+		content: "";
+		position: absolute;
+		width: 190px;
+		height: 180px;
+		bottom: -20px;
+    	right: -30px;
+		background-image: url(../images/content/bottom-right-corner.png);
+	}
+}
+//---------------------------------End About --------------------------
 
 
 
