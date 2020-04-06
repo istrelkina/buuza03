@@ -393,6 +393,9 @@ html{
 	.form{
 		max-width: 700px;
 	}
+	.section-title::before{
+		left: 275px;
+	}
 }
 .order__wrapper .section-title{
 	margin-bottom: 50px;
@@ -421,6 +424,18 @@ html{
 	}
 }
 //---------------------------------End Order --------------------------
+//---------------------------------Start Footer --------------------------
+
+.footer{
+	background-color: $black;
+	padding: 80px 50px 50px 50px;
+	color: #fff;
+}
+.footer__logo,
+.footer__address{
+	margin-bottom: 50px;
+}
+//---------------------------------End Footer --------------------------
 
 
 
