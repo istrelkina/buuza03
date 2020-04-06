@@ -5,7 +5,13 @@
 		padding-left: 60px;
 	}
 	.slider__nav-item{		
-		margin-bottom: 20px;
-		
+		margin-bottom: 20px;		
+	}
+	.gallery__row .gallery__item{
+		min-height: 400px;
+	}
+	h3.gallery__item-title{
+		font-size: 34px;
+		left: 30px;
 	}
 }

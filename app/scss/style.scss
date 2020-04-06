@@ -255,8 +255,18 @@ html{
 	color: $black;
 	margin-top: 110px;
 	margin-bottom: 50px;
+	position: relative;
+	&::before{
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 5px;
+		top: -30px;
+		left: 0;
+		background-color: $orange;
+	}
 }
-.about__desc{
+.block__desc{
 	max-width: 420px;
 	margin-bottom: 75px;
 }
@@ -282,6 +292,135 @@ html{
 	}
 }
 //---------------------------------End About --------------------------
+//---------------------------------Start Gallery --------------------------
+.gallery{
+	margin-bottom: 110px;
+}
+.gallery__wrapper{
+	text-align: center;
+}
+.section-title{
+	font-size: 70px;
+	line-height: 75px;
+	font-weight: 700;
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	&::before{
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 5px;
+		top: -25px;
+    	left: 44px;
+		right: 0;
+		background-color: $orange;
+	}
+}
+.section-desc{
+	margin-bottom: 60px;
+}
+.gallery__inner{
+	
+}
+.gallery__row{
+	display: flex;
+	justify-content: space-between;
+	.gallery__item{
+		width: calc(33.33%);
+		min-height: 505px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+	}
+	h3{
+		font-size: 40px;
+		color: #fff;
+		font-weight: 700;
+		position: absolute;
+		bottom: 0;
+		left: 50px;
+		text-align: left;
+	}
+}
+
+//---------------------------------End Gallery --------------------------
+//---------------------------------Start Price --------------------------
+
+.price{
+	text-align: center;
+	margin-bottom: 150px;
+	h3.section-title::before{
+		left: 147px;
+	}
+}
+.price__inner{
+	display: flex;
+	justify-content: space-between;
+}
+.price__info{
+	width: 50%;
+	text-align: left;
+}
+.price__image{
+	width: 50%;
+	position: relative;
+	&::after{
+		content: "";
+		position: absolute;
+		width: 190px;
+		height: 180px;
+		top: -35px;
+    	left: 50px;
+		background-image: url(../images/content/top-left-corner.png);
+	}
+	&::before{
+		content: "";
+		position: absolute;
+		width: 190px;
+		height: 180px;
+		bottom: -20px;
+    	left: 50px;
+		background-image: url(../images/content/bottom-left-corner.png);
+	}
+}
+//---------------------------------End Price --------------------------
+//---------------------------------Start Order --------------------------
+.order{
+	text-align: center;
+	margin-bottom: 45px;
+	.form{
+		max-width: 700px;
+	}
+}
+.order__wrapper .section-title{
+	margin-bottom: 50px;
+}
+.form-row{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+	.form-row__label{
+		width: 200px;
+		text-align: left;
+		font-size: 26px;
+		font-weight: 400;
+		color: #585757;
+		span{
+			color: red;
+		}
+	}
+	input, textarea{
+		width: 500px;
+		border: 1px solid #585757;
+		padding: 10px 20px;
+	}
+	textarea{
+		min-height: 150px;
+	}
+}
+//---------------------------------End Order --------------------------
 
 
 
