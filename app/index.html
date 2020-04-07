@@ -10,28 +10,33 @@
 </head>
 <body>
 	
-	<header class="header">
+	<header class="header" id="header-id">
 		<div class="container">
 			<div class="header__wrapper">
 				<div class="header__logo">
 					<img src="images/content/logo.png" alt="">
 				</div>
+				<div class="menu-burger">
+					<span></span>
+				</div>
 				<div class="nav">
 					<ul class="nav__menu">
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Меню</a></li>
-						<li><a href="#">Прайс-лист</a></li>
-						<li><a href="#">Заявка</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="#header-id">Главная</a></li>
+						<li><a href="#about-id">О нас</a></li>
+						<li><a href="#price-id">Меню</a></li>
+						<!-- <li><a href="#price-id">Прайс-лист</a></li> -->
+						<li><a href="#order-id">Заявка</a></li>
+						<li><a href="#footer-id">Контакты</a></li>
 					</ul>
+					
 				</div>
+				
 			</div>
 			<div class="slogan__wrapper">
-				<div class="slogan__title">
+				<h1 class="slogan__title">
 					ВСТРЕЧАЕМ С УЛЫБКОЙ,
 					ГОТОВИМ С ЛЮБОВЬЮ
-				</div>
+				</h1>
 				<div class="slogan__subtitle">
 					Чебуреки, буузы, первые, вторые блюда,напитки, доставка блюд по городу.
 				</div>
@@ -42,9 +47,9 @@
 		</div>
 	</header>
 
-	
+		
 
-	<section class="slider">
+	<div class="slider">
 		<div class="slider__items">
 			<div class="slider__item" style="background-image: url(images/slider/slider1.jpg);">
 				
@@ -76,17 +81,17 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 
 	<section class="stocks">
 		
 		<div class="stocks__inner">
 			<div class="stocks__first">
 				
-				<div class="stocks__title">
+				<h2 class="stocks__title">
 					5 БУУЗ ПО 
 					150 РУБЛЕЙ
-				</div>
+				</h2>
 				<div class="stocks__desc">
 					Акция действует до 1 мая
 				</div>
@@ -97,10 +102,10 @@
 			</div>
 			<div class="stocks__second">
 				
-				<div class="stocks__title">
+				<h2 class="stocks__title">
 					В ДЕНЬ РОЖДЕНИЯ
 					СКИДКА 10% 
-				</div>
+				</h2>
 				<div class="stocks__desc">
 					Акция действует в сам день и 
 						при наличии паспорта
@@ -113,13 +118,13 @@
 		</div>
 	</section>
 
-	<section class="about">
+	<section class="about" id="about-id">
 		<div class="container">
 			<div class="about__inner">
 				<div class="about__info">
-					<div class="block-title">
+					<h2 class="block-title">
 						О нас
-					</div>
+					</h2>
 					<div class="block__desc">
 						Мы открылись в июле 2005 года, 
 						рады приветствовать вас в нашем кафе. 
@@ -185,7 +190,7 @@
 		</div>
 	</section>
 
-	<section class="price">
+	<section class="price" id="price-id">
 		<div class="container">
 			<h3 class="section-title">
 				Прайс-лист
@@ -210,12 +215,12 @@
 		</div>
 	</section>
 
-	<section class="order">
+	<section class="order" id="order-id">
 		<div class="container">
 			<div class="order__wrapper">
-				<div class="section-title">
-					ОСТАВИТЬ ЗАЯВКУ
-				</div>
+				<h2 class="section-title">
+					Оставить заявку
+				</h2>
 				<form action="#">
 					<div class="form-row">
 						<div class="form-row__label">
@@ -241,13 +246,14 @@
 						</div>
 						<textarea required></textarea>
 					</div>
+					<button class="order__button">Отправить</button>
 				</form>
 			</div>
 		</div>
 	</section>
 
 
-	<footer class="footer">
+	<footer class="footer" id="footer-id">
 		<div class="container">
 			<div class="footer__logo">
 				<img src="images/content/logo.png" alt="">

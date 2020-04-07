@@ -74,6 +74,9 @@ html{
 		background-color: rgba(34,34,34,.8);
 	}
 }
+.header__logo img{
+		padding-top: 12px;		
+}
 .nav__menu{
 	li{
 		display: inline-block;
@@ -87,6 +90,23 @@ html{
 				text-decoration: underline;
 			}
 		}
+	}
+}
+.menu-burger{
+	
+	display: none;
+	margin-right: 30px;
+	cursor: pointer;
+	&.active::before{
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	&.active::after{
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	&.active span{
+		transform: scale(0);
 	}
 }
 
@@ -141,6 +161,7 @@ html{
 
 .slider{
 	position: relative;
+
 }
 .slider__item{
 	width: 100%;
@@ -233,10 +254,14 @@ html{
 .stocks__first-link,
 .stocks__second-link{
 	margin-bottom: 65px;
+	a{
+		font-weight: 700;
+	}
 }
 .stocks__first-link a{
 	color: $orange;
 	background-color: #fff;
+	
 }
 //---------------------------------End Stocks --------------------------
 //---------------------------------Start About --------------------------
@@ -421,6 +446,17 @@ html{
 	}
 	textarea{
 		min-height: 150px;
+	}
+}
+.order__button{
+	padding: 27px 75px;
+	background-color: $orange;
+	border: none;
+	border-radius: 39px;
+	cursor: pointer;	
+	color: #fff;	
+	&:hover{
+		text-decoration: underline;
 	}
 }
 //---------------------------------End Order --------------------------
