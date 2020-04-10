@@ -27,15 +27,23 @@
 	.header__logo img{
 		padding-left: 20px;
 	}
-	/* .header__wrapper::before{
-		width: 15px;
-		left: -15px;
+	.stocks__title{
+		font-size: 36px;
 	}
-	.header__wrapper::after{
-		width: 15px;
-		right: -15px;
-	} */
+	.gallery__row .gallery__item{
+		min-height: 300px;
+	}
+	h3.gallery__item-title{
+		font-size: 22px;
+	}
 }
+@media(max-width: 1100px){
+	.price__image::after,
+	.price__image::before{
+		width: 0;
+		height: 0;
+	}
+} 
 @media(max-width: 970px){
 	.slogan__title {
 	    font-size: 44px;
@@ -52,6 +60,41 @@
 	}
 	.nav__menu li a{
 		font-size: 14px;
+	}
+	.about-image img {
+	    width: 350px;	    
+	}
+	.about-image::before{
+		bottom: 10px;
+	}
+	.block-title{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.block__desc {
+		margin-bottom: 35px;
+	}
+}
+@media(max-width: 910px){
+	.stocks__title{
+		font-size: 32px;
+		line-height: 60px;
+	} 
+	.stocks__first, 
+	.stocks__second {
+    	padding-top: 60px;
+    	padding-left: 40px;
+	}
+	.gallery__inner{
+		display: flex;
+		
+	}
+	.gallery__row .gallery__item{
+		width: 100%;
+	}
+	.gallery__row{
+		width: 50%;
+		flex-direction: column;
 	}
 }
 @media(max-width: 805px){
@@ -89,6 +132,7 @@
 			width: 100%;
 			height: 2px;
 			left: 0;
+			transition: all .3s;
 		}
 		&::before{
 			top: 0;
@@ -103,6 +147,7 @@
 			width: 100%;
 			height: 2px;
 			top: 9px;
+			transition: all .3s;
 		}
 	}
 
@@ -134,9 +179,86 @@
 			}
 		}
 	}
+	.stocks__first-link, .stocks__second-link {
+	    margin: 30px 0 35px;
+	}
+	.order__link a {
+	    padding: 17px 35px;	    
+	    border-radius: 29px;	    
+	}
+	.block-title {
+	    font-size: 34px;
+	    line-height: 50px
+	}
+	.price{
+		margin-bottom: 100px;
+	}
+}
+@media(max-width: 700px){ 
+	.about-image{
+		display: none;
+	}
+	.section-title {
+	    font-size: 46px;
+	    line-height: 54px;
+	}
+	.price h3.section-title::before {
+	    left: 87px;
+	}
+	.order .section-title::before{
+		left: 160px;
+	}
+	.section-title::before{
+		left: 16px;
+	}
+	.about{
+		margin-bottom: 100px;
+	} 
+	.form-row .form-row__label{
+		font-size: 20px;
+	}
+	.form-row{
+		margin-bottom: 20px;
+	}
+
+}
+@media(max-width: 660px){ 
+	.stocks__title {
+	    font-size: 28px;
+	    line-height: 44px;
+	}
+	.stocks__inner{
+		flex-wrap: wrap;
+	}
+	.stocks__first, 
+	.stocks__second {
+    	width: 100%;
+    }
+    .price__inner{
+    	flex-wrap: wrap;
+    	.price__info,
+	    .price__image{
+			width: 100%;
+	    }
+	    .price__info{
+	    	margin-bottom: 20px;
+	    }
+    }
+    
 }
 
-
+@media(max-width: 520px){ 
+	.form-row{
+		display: block;
+	}
+	.form-row input, .form-row textarea{
+		max-width: 100%;
+		padding: 8px 10px;
+	}
+	.form-row .form-row__label{
+		font-size: 16px;
+	}
+}
 @media(max-width: 450px){ 
 	.slogan__title{
 		font-size: 24px;		
@@ -146,6 +268,29 @@
 	}
 	.order__link a{
 		padding: 15px 55px;
+	}
+	.stocks__first, .stocks__second {
+	    padding-top: 50px;
+	    padding-left: 20px;
+	}
+	.block-title{
+		font-size: 40px;
+	}
+	.gallery__row{
+		width: 100%;
+	}
+	.gallery__inner{
+		flex-wrap: wrap;
+	}
+	.order .section-title::before{
+		width: 90%;
+		left: 20px;
+	}
+	.footer{
+		padding: 50px 10px;
+		.footer__logo img{
+			width: 280px;
+		}
 	}
 }
 @media(max-width: 400px){ 
@@ -157,8 +302,20 @@
 		margin-right: 10px;
 	}
 }
-
-
+@media(max-width: 360px){ 
+	.order__link a {
+	    padding: 15px 35px;
+	}
+	.gallery__row .gallery__item{
+		min-height: 200px;
+	}
+	h3.gallery__item-title {	    
+	    left: 20px;
+	}
+	.footer .footer__logo img{
+		width: 240px;
+	}
+}
 
 
 @media(min-width: 791px){
