@@ -4,7 +4,7 @@ $(function(){
 	  slidesToScroll: 1,
 	  arrows: false,
 	  fade: true,
-	  //autoplay: true,
+	  autoplay: true,
 	  asNavFor: '.slider__nav'
 	});
 	$('.slider__nav').slick({

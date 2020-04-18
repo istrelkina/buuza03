@@ -96,7 +96,7 @@
 					Акция действует до 1 мая
 				</div>
 				<div class="order__link stocks__first-link">
-					<a href="#">Оставить заявку</a>
+					<a href="#order-id">Оставить заявку</a>
 				</div>
 				
 			</div>
@@ -111,7 +111,7 @@
 						при наличии паспорта
 				</div>
 				<div class="order__link stocks__second-link">
-					<a href="#">Оставить заявку</a>
+					<a href="#order-id">Оставить заявку</a>
 				</div>
 				
 			</div>
@@ -154,36 +154,54 @@
 			<div class="gallery__inner">
 				<div class="gallery__row">
 					<div class="gallery__item" style="background-image: url(images/gallery/cheburek1.jpg);">
-						<h3 class="gallery__item-title">
-							Чебурек "Классический"
-						</h3>
+						<div class="gallery__item-info">
+							<h3 class="gallery__item-title">
+								Чебурек "Классический"
+							</h3>
+							<p>сочный чебурек с говядиной и свининой</p>
+						</div>
 					</div>
 					<div class="gallery__item" style="background-image: url(images/gallery/cheburek2.jpg);">
-						<h3 class="gallery__item-title">
-							Чебурек "Деревенский"
-						</h3>
+						<div class="gallery__item-info">
+							<h3 class="gallery__item-title">
+								Чебурек "Деревенский"
+							</h3>
+							<p>аппетитный чебурек с картофелем и грибами</p>
+						</div>
 					</div>
 					<div class="gallery__item" style="background-image: url(images/gallery/cheburek3.jpg);">
-						<h3 class="gallery__item-title">
-							Чебурек "Сырный"
-						</h3>
+						<div class="gallery__item-info">
+							<h3 class="gallery__item-title">
+								Чебурек "Сырный"
+							</h3>
+							<p>хрустящее тесто с тающей начинкой из брынзы и сыра</p>
+						</div>
 					</div>
 				</div>
 				<div class="gallery__row">
 					<div class="gallery__item" style="background-image: url(images/gallery/cheburek4.jpg);">
-						<h3 class="gallery__item-title">
-							Чебурек "Дамский"
-						</h3>
+						<div class="gallery__item-info">
+							<h3 class="gallery__item-title">
+								Чебурек "Дамский"
+							</h3>
+							<p>с курицей и жареным луком</p>
+						</div>
 					</div>
 					<div class="gallery__item" style="background-image: url(images/gallery/cheburek5.jpg);">
-						<h3 class="gallery__item-title">
-							Чебурек "Сластёна"
-						</h3>
+						<div class="gallery__item-info">
+							<h3 class="gallery__item-title">
+								Чебурек "Сластёна"
+							</h3>
+							<p>оригинальный чебурек, начиненный яблоком</p>
+						</div>
 					</div>
 					<div class="gallery__item" style="background-image: url(images/gallery/cheburek6.jpg);">
-						<h3 class="gallery__item-title">
-							Чебурек "Оригинальный"
-						</h3>
+						<div class="gallery__item-info">
+							<h3 class="gallery__item-title">
+								Чебурек "Оригинальный"
+							</h3>
+							<p></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -209,7 +227,16 @@
 					</div>
 				</div>
 				<div class="price__image">
-					<img src="images/content/price.jpg" alt="">
+					<div class="overlay" id="big-price">
+						<div class="overlay_container">
+							<a href="#close">
+								<img src="images/content/big-price.jpg"/>
+							</a>
+						</div>
+					</div>
+					<a href="#big-price">
+						<img src="images/content/price.jpg" id="small-image" />
+					</a>
 				</div>
 			</div>
 		</div>
@@ -221,32 +248,32 @@
 				<h2 class="section-title">
 					Оставить заявку
 				</h2>
-				<form action="#">
+				<form action="send.php" method="post">
 					<div class="form-row">
-						<div class="form-row__label">
+						<div class="form-row__label" >
 							Имя <span>*</span>
 						</div>
-						<input type="text" required>
+						<input type="text" name="first_name" required>
 					</div>
 					<div class="form-row">
-						<div class="form-row__label">
+						<div class="form-row__label" >
 							Телефон <span>*</span>
 						</div>
-						<input type="text" required>
+						<input type="text" name="phone" required>
 					</div>
 					<div class="form-row">
 						<div class="form-row__label">
 							Email
 						</div>
-						<input type="text" required>
+						<input type="text" required name="email">
 					</div>
 					<div class="form-row">
 						<div class="form-row__label">
 							Сообщение <span>*</span>
 						</div>
-						<textarea required></textarea>
+						<textarea name="message" required></textarea>
 					</div>
-					<button class="order__button">Отправить</button>
+					<button class="order__button" type="submit" name="submit">Отправить</button>
 				</form>
 			</div>
 		</div>

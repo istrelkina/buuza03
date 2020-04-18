@@ -15,15 +15,16 @@
 		font-size: 34px;
 		left: 30px;
 	}
+	.slogan__wrapper {
+		margin-left: 290px;
+	}
 }
 @media(max-width: 1200px){
 	.slogan__title {
 		font-size: 50px;
 		line-height: 67px;
 	}
-	.slogan__wrapper {
-		margin-left: 290px;
-	}
+	
 	.header__logo img{
 		padding-left: 20px;
 	}

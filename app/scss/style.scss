@@ -368,14 +368,24 @@ html{
 		background-size: cover;
 		position: relative;
 	}
+	.gallery__item-info{
+		position: absolute;
+		bottom: 0;
+		left: 20px;
+		text-align: left;
+		color: #fff;
+		height: 170px;
+		p{
+			text-shadow: 1px 1px 2px #000;
+			line-height: 22px;
+		}
+	}
+
 	h3{
 		font-size: 40px;
 		color: #fff;
 		font-weight: 700;
-		position: absolute;
-		bottom: 0;
-		left: 50px;
-		text-align: left;
+		text-shadow: 1px 1px 2px #000;
 	}
 }
 
@@ -385,6 +395,7 @@ html{
 .price{
 	text-align: center;
 	margin-bottom: 150px;
+	position: relative;
 	h3.section-title::before{
 		left: 147px;
 	}
@@ -419,6 +430,30 @@ html{
     	left: 50px;
 		background-image: url(../images/content/bottom-left-corner.png);
 	}
+}
+.overlay{
+	display: none;
+	height: auto;
+	left: -15%;
+	position: absolute;
+	top: -50%;
+	width: auto;
+	z-index: 999;
+
+}
+.overlay .overlay_container{
+	display: table-cell;
+	vertical-align: middle;
+
+}
+.overlay_container img{
+	background-color: #AB5;
+	padding: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+.overlay:target {
+	display: table;
 }
 //---------------------------------End Price --------------------------
 //---------------------------------Start Order --------------------------
