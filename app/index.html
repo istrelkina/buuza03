@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width; initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Бууза&Чебурек</title>
 	<link rel="stylesheet" href="css/libs.min.css">
@@ -10,23 +10,23 @@
 </head>
 <body>
 	
+
 	<header class="header" id="header-id">
 		<div class="container">
 			<div class="header__wrapper">
 				<div class="header__logo">
-					<img src="images/content/logo.png" alt="">
+					<a href=""><img src="images/content/logo.png" alt=""></a>
 				</div>
 				<div class="menu-burger">
 					<span></span>
 				</div>
 				<div class="nav">
 					<ul class="nav__menu">
-						<li><a href="#header-id">Главная</a></li>
-						<li><a href="#about-id">О нас</a></li>
-						<li><a href="#price-id">Меню</a></li>
-						<!-- <li><a href="#price-id">Прайс-лист</a></li> -->
-						<li><a href="#order-id">Заявка</a></li>
-						<li><a href="#footer-id">Контакты</a></li>
+						<li><a href="#header-id" class="nav__menu-link">Главная</a></li>
+						<li><a href="#about-id" class="nav__menu-link">О нас</a></li>
+						<li><a href="#price-id" class="nav__menu-link">Меню</a></li>						
+						<li><a href="#order-id" class="nav__menu-link">Заявка</a></li>
+						<li><a href="#footer-id" class="nav__menu-link">Контакты</a></li>
 					</ul>
 					
 				</div>
@@ -266,6 +266,7 @@
 							Email
 						</div>
 						<input type="text" required name="email">
+						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" />
 					</div>
 					<div class="form-row">
 						<div class="form-row__label">
@@ -282,23 +283,32 @@
 
 	<footer class="footer" id="footer-id">
 		<div class="container">
-			<div class="footer__logo">
-				<img src="images/content/logo.png" alt="">
-			</div>
-			<div class="footer__address">
-				<ul>
-					<li>Ул. Карьерная, 5</li>
-					<li>Исток, на трассе, поворот на карьер</li>
-				</ul>
-				
-				
-			</div>
-			<div class="footer__phone">
-				<ul>
-					<li>31-75-40</li>
-					<li>+7-983-336-20-13, Оюна</li>
-				</ul>				 
-				
+			<div class="footer__wrapper">
+				<div class="footer__left">
+					<div class="footer__logo">
+						<img src="images/content/logo.png" alt="">
+					</div>
+					<div class="footer__address">
+						<ul>
+							<li>Ул. Карьерная, 5</li>
+							<li>Исток, на трассе, поворот на карьер</li>
+						</ul>
+						
+						
+					</div>
+					<div class="footer__phone">
+						<ul>
+							<li>31-75-40</li>
+							<li>+7-983-336-20-13, Оюна</li>
+						</ul>				 
+						
+					</div>
+				</div>
+				<div class="footer__right">
+					<p>
+						Разработка сайта <a href="http://strelaweb.ru" target="_blank">strelaweb.ru</a>
+					</p>
+				</div>
 			</div>
 
 		</div>
@@ -308,5 +318,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<script src="https://www.google.com/recaptcha/api.js?render=6LdJLu0UAAAAAJPFTZbwSV_VzTMGAkJMqSLRct-Z"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LdJLu0UAAAAAJPFTZbwSV_VzTMGAkJMqSLRct-Z', {action: 'homepage'}).then(function(token) {
+                //console.log(token);
+                document.getElementById('g-recaptcha-response').value=token;
+            });
+        });
+  </script>
+
 </body>
 </html>

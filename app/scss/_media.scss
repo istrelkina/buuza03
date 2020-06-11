@@ -97,6 +97,7 @@
 		width: 50%;
 		flex-direction: column;
 	}
+
 }
 @media(max-width: 805px){
 	.header__logo img{
@@ -111,6 +112,12 @@
 	    display: inline-block;
 	    padding-right: 22px;
 	    padding-left: 10px;
+	}
+	.footer__wrapper{
+		display: block;
+	}
+	.footer__left{
+		margin-bottom: 20px;
 	}
 }
 @media(max-width: 790px){  //разрешение 768 для мобильных устройств 
@@ -240,6 +247,9 @@
     	.price__info,
 	    .price__image{
 			width: 100%;
+			a img{
+				width: 100%;
+			}
 	    }
 	    .price__info{
 	    	margin-bottom: 20px;
