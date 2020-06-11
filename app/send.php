@@ -12,12 +12,7 @@
 <body>
 <?php
 
-define('SECRET_KEY', '6LdJLu0UAAAAANz-SUPAenFrVVDpQL7ync-jvI4U');
-function getCaptcha($SecretKey) {
-        $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
-        $Return = json_decode($Response);
-        return $Return;
-    }
+
 
 $Return = getCaptcha($_POST['g-recaptcha-response']);
 //console.log($Return);
